@@ -1,0 +1,27 @@
+.parent{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 60px 1fr 60px;
+    grid-template-columns: 1fr;
+}
+
+.parent .header{
+    background: linear-gradient(90deg,#3292af 0,#8f40ae 41%,#c87881 80%);
+}
+
+.parent .main{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #e9f5ff;
+}
+
+.parent .footer{
+    background: linear-gradient(90deg,#3292af 0,#8f40ae 41%,#c87881 80%);
+}
+
+.board { border-spacing: 0; border-collapse: collapse; }
+.board th { padding: .5em; }
+.board td { border: 1px solid; width: 4em; height: 4em; }
+.board .light { background: #eee; }
+.board .dark { background: #000; }
