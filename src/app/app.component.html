@@ -6,7 +6,7 @@
           <div class="categories-item" cdkDropList cdkDropListOrientation="horizontal" [cdkDropListData]="{item:color,index:i}"
             (cdkDropListDropped)="drop($event)">
             <div class="inner" [ngStyle]="{'background-color':color}" cdkDrag>
-              {{color}}
+              <!-- {{color}} -->
             </div>
           </div>
         </ng-container>

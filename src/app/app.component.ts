@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   drop(event: CdkDragDrop<any>) {
     this.colors[event.previousContainer.data.index]=event.container.data.item;
     this.colors[event.container.data.index]=event.previousContainer.data.item;
+    console.log(this.colors);
   }
 
   ngOnInit(){
