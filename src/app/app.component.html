@@ -1,88 +1,16 @@
 <div class="parent">
   <div class="header"></div>
   <div class="main">
-    <table class="board">
-          <tr>
-            <td class="light"></td>
-            <td class="dark"></td>
-            <td class="light"></td>
-            <td class="dark"></td>
-            <td class="light"></td>
-            <td class="dark"></td>
-            <td class="light"></td>
-            <td class="dark"></td>
-          </tr>
-          <tr>
-            <td class="dark"></td>
-            <td class="light"></td>
-            <td class="dark"></td>
-            <td class="light"></td>
-            <td class="dark"></td>
-            <td class="light"></td>
-            <td class="dark"></td>
-            <td class="light"></td>
-          </tr>
-          <tr>
-            <td class="light"></td>
-            <td class="dark"></td>
-            <td class="light"></td>
-            <td class="dark"></td>
-            <td class="light"></td>
-            <td class="dark"></td>
-            <td class="light"></td>
-            <td class="dark"></td>
-          </tr>
-          <tr>
-            <td class="dark"></td>
-            <td class="light"></td>
-            <td class="dark"></td>
-            <td class="light"></td>
-            <td class="dark"></td>
-            <td class="light"></td>
-            <td class="dark"></td>
-            <td class="light"></td>
-          </tr>
-          <tr>
-            <td class="light"></td>
-            <td class="dark"></td>
-            <td class="light"></td>
-            <td class="dark"></td>
-            <td class="light"></td>
-            <td class="dark"></td>
-            <td class="light"></td>
-            <td class="dark"></td>
-          </tr>
-          <tr>
-            <td class="dark"></td>
-            <td class="light"></td>
-            <td class="dark"></td>
-            <td class="light"></td>
-            <td class="dark"></td>
-            <td class="light"></td>
-            <td class="dark"></td>
-            <td class="light"></td>
-          </tr>
-          <tr>
-            <td class="light"></td>
-            <td class="dark"></td>
-            <td class="light"></td>
-            <td class="dark"></td>
-            <td class="light"></td>
-            <td class="dark"></td>
-            <td class="light"></td>
-            <td class="dark"></td>
-          </tr>
-          <tr>
-            <td class="dark"></td>
-            <td class="light"></td>
-            <td class="dark"></td>
-            <td class="light"></td>
-            <td class="dark"></td>
-            <td class="light"></td>
-            <td class="dark"></td>
-            <td class="light"></td>
-          </tr>
-    </table>
+    <div class="categories" cdkDropListGroup>
+        <ng-container *ngFor="let color of colors;let i=index">
+          <div class="categories-item" cdkDropList cdkDropListOrientation="horizontal" [cdkDropListData]="{item:color,index:i}"
+            (cdkDropListDropped)="drop($event)">
+            <div class="inner" [ngStyle]="{'background-color':color}" cdkDrag>
+              {{color}}
+            </div>
+          </div>
+        </ng-container>
+      </div>
   </div>
   <div class="footer"></div>
 </div>
